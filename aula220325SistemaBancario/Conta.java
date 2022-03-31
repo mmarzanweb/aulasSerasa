@@ -6,15 +6,15 @@ public class Conta {
 	
 	private int agencia;
 	private int numeroConta;
-	private double saldo;
-	private String titular;
+	protected double saldo;
+	private PessoaHeranca titular;
 	
 	//construtores
 	public Conta() { //padrao
 	}
 
 
-	public Conta(int agencia, int numeroConta, String titular) { //sobrecarregada
+	public Conta(int agencia, int numeroConta, PessoaHeranca titular) { //sobrecarregada
 		super();
 		this.agencia = agencia;
 		this.numeroConta = numeroConta;
@@ -83,12 +83,12 @@ public class Conta {
 		return saldo;
 	}
 	
-	public String getTitular() {
+	public PessoaHeranca getTitular() {
 		return titular;
 	}
 
 
-	public void setTitular(String titular) {
+	public void setTitular(PessoaHeranca titular) {
 		this.titular = titular;
 	}	
 
